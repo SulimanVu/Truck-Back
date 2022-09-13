@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "image")))
 app.use(cors())
 app.use(express.json())
 app.use(require('./routes/car.route'))
-// app.use(require('./routes/request.route'))
+app.use(require('./routes/request.route'))
 app.use(require('./routes/user.route'))
 
 mongoose
