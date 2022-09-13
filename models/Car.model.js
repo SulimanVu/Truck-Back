@@ -9,7 +9,8 @@ const carSchema = mongoose.Schema({
     model: String,
     busy: Boolean,
     fridge: Boolean,
-    carTransporter: Boolean
+    carTransporter: Boolean,
+    img: String
 })
 
 const Car = mongoose.model("Car", carSchema);
