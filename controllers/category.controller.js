@@ -8,11 +8,8 @@ module.exports.category = {
     res.json(category);
   },
 
-  updateCategory: async (req, res) => {
-    const data = await Category.findByIdAndUpdate(req.params.id, {
-      name: req.body.name
-    });
+  getCategory: async (req, res) => {
+    const data = await Category.find();
     res.json(data);
-}
-
+  },
 };
