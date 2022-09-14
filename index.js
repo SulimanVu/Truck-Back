@@ -13,6 +13,7 @@ app.use(express.json())
 app.use(require('./routes/car.route'))
 app.use(require('./routes/request.route'))
 app.use(require('./routes/user.route'))
+app.use(require('./routes/category.route'))
 
 mongoose
   .connect(process.env.MONGO_SERVER)
