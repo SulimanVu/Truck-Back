@@ -2,7 +2,7 @@ const Request = require("../models/Request.model");
 
 module.exports.request = {
   getRequests: async (req, res) => {
-    const data = await Request.find();
+    const data = await Request.find().populate('car');
     res.json(data);
   },
   addRequest: async (req, res) => {

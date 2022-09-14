@@ -1,4 +1,3 @@
-
 const Car = require("../models/Car.model");
 
 
@@ -20,9 +19,11 @@ module.exports.car = {
             busy: req.body.busy,
             fridge: req.body.fridge,
             carTransporter: req.body.carTransporter,
-            img: req.body.img
+            img: req.body.img,
+            category: req.body.category
         })
-        res.json(car)
+        const result = await car.populate('category')
+        res.json(result)
     }
 
 }

@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const carSchema = mongoose.Schema({
     name: String,
-    Phone: String,
+    phone: String,
     loadСapacity: Number,
     bottleWidth: Number,
     bottleHeight: Number,
@@ -10,7 +10,11 @@ const carSchema = mongoose.Schema({
     busy: Boolean,
     fridge: Boolean,
     carTransporter: Boolean,
-    img: String
+    img: String,
+    category: {
+        type: mongoose.SchemaTypes.ObjectId,
+        ref: 'Category'
+    }
 })
 
 const Car = mongoose.model("Car", carSchema);
