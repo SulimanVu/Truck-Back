@@ -19,7 +19,8 @@ module.exports.car = {
             model: req.body.model,
             busy: req.body.busy,
             fridge: req.body.fridge,
-            carTransporter: req.body.carTransporter
+            carTransporter: req.body.carTransporter,
+            img: req.body.img
         })
         res.json(car)
     }
