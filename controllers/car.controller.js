@@ -3,8 +3,7 @@ const Car = require("../models/Car.model");
 
 module.exports.car = {
     getCar: async (req, res) => {
-        const car = await Car.find();
-
+        const car = await Car.find().populate('category');
         res.json(car)
     },
 
