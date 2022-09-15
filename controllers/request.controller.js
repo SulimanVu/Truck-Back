@@ -12,13 +12,19 @@ module.exports.request = {
       from: req.body.from,
       to: req.body.to,
       km: req.body.km,
+      kg: req.body.kg,
       price: req.body.price,
     });
     res.json(data);
   },
   updateRequest: async (req, res) => {
     const data = await Request.findByIdAndUpdate(req.params.id, {
+      car: req.body.car,
+      user: req.body.user,
+      from: req.body.from,
+      to: req.body.to,
       km: req.body.km,
+      kg: req.body.kg,
       price: req.body.price,
     });
     res.json(data);

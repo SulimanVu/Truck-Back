@@ -12,6 +12,7 @@ const requestSchema = mongoose.Schema({
     from: String,
     to: String,
     km: Number,
+    kg: Number,
     price: Number
 })
 
