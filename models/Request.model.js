@@ -11,6 +11,8 @@ const requestSchema = mongoose.Schema({
     },
     from: String,
     to: String,
+    latLngFrom: Object,
+    latLngTo: Object,
     km: Number,
     kg: Number,
     price: Number

@@ -14,6 +14,9 @@ module.exports.request = {
       km: req.body.km,
       kg: req.body.kg,
       price: req.body.price,
+      latLngFrom: req.body.latLngFrom,
+      latLngTo: req.body.latLngTo,
+
     });
     res.json(data);
   },
@@ -26,6 +29,8 @@ module.exports.request = {
       km: req.body.km,
       kg: req.body.kg,
       price: req.body.price,
+      latLngFrom: req.body.latLngFrom,
+      latLngTo: req.body.latLngTo,
     });
     res.json(data);
   },
