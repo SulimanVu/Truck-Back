@@ -15,7 +15,11 @@ const requestSchema = mongoose.Schema({
     latLngTo: Object,
     km: Number,
     kg: Number,
-    price: Number
+    price: Number, 
+    payed: {
+        type: Boolean,
+        default: false,
+    },
 })
 
 const Request = mongoose.model("Request", requestSchema);
