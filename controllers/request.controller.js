@@ -23,6 +23,7 @@ module.exports.request = {
   updateRequest: async (req, res) => {
     const data = await Request.findByIdAndUpdate(req.params.id, {
       car: req.body.car,
+      payed: req.body.payed,
       user: req.body.user,
       from: req.body.from,
       to: req.body.to,
